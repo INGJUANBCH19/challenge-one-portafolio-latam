@@ -1,20 +1,28 @@
 /* Este repositório base fué creado para ayudarte en caso que no sepas como comenzar, recuerda que el portafolio es tu carta de presentación y debes darle tu cara, por eso te invitamos a personalizarlo según tu estilo y preferencias no te limites apenas al layout propuesto en figma  
 */
 :root {
-    --color-de-fondo: #F5F5F5;
-    --color-de-fondo-menu: #ffffff;
-    --color-de-link: #000000;
+    --color-de-fondo: #F8F9FA;
+    --color-de-cabecera: #F5F5F5;
+    --color-de-fondo-menu: #C0C0C0;
+    --color-de-link: #23395D;
+    --coloe-de-tipografia:#23395D;
+    --color--verde:#50C878;
+    --tipografi--1:  'Lora', sans-serif;
+    --tipografi--2:  'Lato', sans-serif;
 }
 
-body {
-    background-color: var(--color-de-fondo);
-    font-family: 'Raleway', sans-serif;
+.body {
+    background-color: var(--color-de-cabecera);
+   
     margin: 0;
     box-sizing: border-box;
     padding: 0;
     line-height: 1.6;
 }
-
+.cabecera__logo{
+    
+   width: 100px;
+}
 ol, ul, li {
     list-style: none;
 }
@@ -22,6 +30,7 @@ ol, ul, li {
 a {
     text-decoration: none;
     color: var(--color-de-link);
+    font-family: var(--tipografi--2);
 }
 
 /* ------------------------------ Sección Menú -------------------------------*/
@@ -30,16 +39,17 @@ a {
     flex-direction: column;
     align-items: center;
     padding: 1rem;
-    background-color: var(--color-de-fondo-menu);
+    background-color: var(--color-de-cabecera);
 }
 
 .cabecera__logo {
-    max-width: 80px; /* Ajuste para pantallas pequeñas */
+    max-width: 100px; /* Ajuste para pantallas pequeñas */
 }
 
 .cabecera__titulo {
     font-size: 1.2rem;
     text-align: center;
+    font-family: var(--tipografi--2)
 }
 
 .navegacion__lista {
@@ -48,27 +58,197 @@ a {
 
 .navegacion__elemento a {
     font-size: 0.9rem;
+    color: #001F3F;
+
 }
+
 /* ------------------------------ Sección Presentación ------------------------------*/
+.presentacion{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+}
+.presentacion__foto{
+    max-width: 35%;
+    gap: 20px;
+    border: 5px solid var(--color--verde);
+    border-radius: 50%;
+   
+}
+.presentacion__contenedor{
+    justify-content: center;
+    align-items: center;
+    
+}
+.presentacion__titulo{
+    color: var(--coloe-de-tipografia);
+    font-family: var(--tipografi--1);
+
+}
+.presentacion__subtitulo{
+    color: var(--coloe-de-tipografia);
+    font-family: var(--tipografi--2);
+}
+.redes{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap:20px;
+    color: var(--color--verde);
+}
 
 
 /* ------------------------------ Sección sobre mí ----------------------------------*/
+.sobre-mi{
+    background-color: var(--color-de-fondo-menu);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    
+}
 
+.sobre-mi__titulo{
+    color: var(--coloe-de-tipografia);
+    
+    
+
+}
+.sobre-mi__texto{
+    color: var(--coloe-de-tipografia);
+    font-family: var(--tipografi--2);
+    
+    
+}
 
 /*------------------------------ Sección de Habilidades ------------------------------*/
 
+.habilidades{
+    color: var(--coloe-de-tipografia);
 
-/*------------------------------ Sección de Aficiones --------------------------------*/
+}
+.habilidades__lista{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    padding: 20px;
+    font-family: var(--tipografi--2);
+    color: var(--coloe-de-tipografia);
+}
 
 
 /*------------------------------ Sección de Proyectos --------------------------------*/
+.formacion{
+    background-color: var(--color-de-fondo-menu);
+    color: var(--coloe-de-tipografia);
+    
+}
+.formacion__lista{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+justify-content: space-around;
+gap: 10px;
+}
+.formacion__nombre{
+    color: var(--coloe-de-tipografia);
+    font-family: var(--tipografi--2);
+    
+}
 
+
+
+.proyectos .proyectos__contenedor {
+    background-color: var(--color-secundario);
+    margin: 20px;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: var(--coloe-de-tipografia);
+}
+
+.proyectos .proyectos__contenedor h3 {
+    color: var(--color-primario);
+    font-family: 'Cardo', serif;
+    margin-bottom: 10px;
+    text-align:center;
+    
+}
+.imgproyectos{
+    width: 100%;
+}
+
+.bttrepositorio,.bttverdemo {
+    padding: 10px 20px;
+    cursor: pointer;
+    border: 1px solid #67C28B; /* Color de borde */
+    background-color: white;
+    color: #67C28B;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.bttrepositorio:hover {
+    background-color: #67C28B;
+    color: white;
+}
+
+.bttverdemo {
+    background-color: #67C28B;
+    color: white;
+    border: none;
+}
+
+.bttverdemo:hover {
+    background-color: #5ca774;
+}
+
+*
 
 /*------------------------------ Sección de Contacto ---------------------------------*/
 
 
-/* ------------------------------ Responsividad ---------------------------------------*/
+.contacto__formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 80%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+}
 
+.contacto__formulario input,
+.contacto__formulario textarea {
+    padding: 15px;
+    border-radius: 5px;
+    border: 2px dashed var(--color--verde);
+    background-color: var(--color-de-fondo);
+}
+
+.contacto__formulario button {
+    padding: 15px;
+    background-color: var(--color--verde);
+    color: var(--color-de-cabecera);
+    border: none;
+    font-size: 16px;
+
+ cursor: pointer;
+transition: background-color 0.3s;
+}
+
+.contacto__formulario button:hover {
+    background-color: var(--color-de-link);
+    color: var(--color--verde);
+}
+.contacto__titulo{ color: var(--coloe-de-tipografia);}
+/* ------------------------------ Responsividad ---------------------------------------*/
+footer{
+    text-align: center;
+}
 /* Tablets y pantallas más grandes */
 @media (min-width: 768px) {
     .cabecera {
@@ -95,16 +275,178 @@ a {
     .navegacion__elemento a {
         font-size: 1rem;
     }
+    .presentacion{
+        flex-direction: row-reverse;
+    }
+    .presentacion__titulo{
+        font-size: 38px;
+    }
+    .presentacion__subtitulo{
+        font-size: 18px;
+    }
+    .formacion__lista{
+        display:flex;
+        flex-direction: row;
+    justify-content: space-around;
+    gap: 10px;
+    }
+    .formacion__lista{
+        display:flex;
+        flex-direction: row;
+    justify-content: space-around;
+    gap: 10px;
+    }
+
 }
 
 /* Pantallas grandes */
 @media (min-width: 1024px) {
     /* Aquí puedes ajustar aún más el diseño para pantallas grandes */
+    .cabecera{
+        justify-content: space-around;
+    }
     .cabecera__titulo {
         font-size: 1.8rem;
+        
+    }
+    .cabecera__logo {
+        width:  200px;
+        height: 150px;
     }
 
     .navegacion__elemento a {
         font-size: 1.1rem;
+        padding-right: 15px;
     }
-}
+    /*Presentacion*/
+    .presentacion{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-around;
+        align-items: center;
+        gap: 20px;
+    }
+    .presentacion__foto{
+        max-width: 15%;
+        gap: 10px;
+        justify-content: center;
+    }
+    .presentacion__contenedor{
+        
+        justify-content: center;
+    }
+    .redes{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        gap:20px;
+       
+    }
+    .sobre-mi{
+        padding: 50px;
+    
+    }
+    .formacion__lista{
+        display:flex;
+        flex-direction: row;
+    justify-content: space-around;
+    gap: 10px;
+    }
+    
+    .proyectos {
+        padding: 40px;
+        
+        background-color: #f5f5f5;
+    }
+    
+    .proyectos__contenedor {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: space-around; /* Distribuye los elementos hacia los lados */
+        margin-bottom: 40px; /* Separación entre los proyectos */
+        max-width: 1200px; /* Limita el ancho máximo del contenedor */
+        margin: 0 auto; /* Centra horizontalmente el contenedor */
+    }
+    
+    .imgproyectos {
+        width: 300px; /* Ajusta el tamaño de la imagen */
+        height: auto;
+        object-fit: cover;
+    }
+    
+    .proyectos__contenido {
+        display: flex;
+        
+        align-items: center;
+        flex-direction: column; /* Coloca el contenido (h3, p, botones) uno debajo del otro */
+        gap: 20px; /* Espacio entre elementos */
+        max-width: 600px; /* Limita el ancho del contenido */
+    }
+    
+    .proyectos__nombre {
+        font-size: 28px;
+        font-weight: bold;
+        margin: 0;
+        color: #333;
+    }
+    
+    .proyectos__descripcion {
+        font-size: 18px;
+        color: #666;
+        margin: 0;
+    }
+    
+    .bttrepositorio,.bttverdemo {
+        padding: 12px 25px;
+        cursor: pointer;
+        border: 1px solid var(--color--verde); /* Color del borde del botón */
+        background-color: white;
+        color: var(--color--verde);
+        border-radius: 5px;
+        font-size: 16px;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    
+    .bttrepositorio:hover {
+        background-color:var(--color--verde);
+        color: white;
+    }
+    
+    .bttverdemo {
+        background-color: var(--color--verde);
+        color: white;
+        border: none;
+    }
+    
+    .bttverdemo:hover {
+        background-color: var(--color-de-fondo-menu);
+    }
+    
+    
+       
+         
+
+     
+     .imgproyectos{
+         width:50%;
+         
+         
+     }
+     .proyectos__nombre{
+        text-align: right;
+     }
+     .proyectos__descripcion{
+        text-align: right;
+     }
+
+     }
+     .contacto__titulo{
+        display: flex;
+        justify-content: center;
+     }
+     
+     footer{
+       text-align: flex-start;
+
+     }
